@@ -8,6 +8,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy all static assets
+COPY . .
 COPY assets/ ./assets/
 COPY images/ ./images/
 
