@@ -1,22 +1,17 @@
-# Use the official .NET SDK image for build
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /app
+# Use the official Nginx base image
+FROM nginx:alpine
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+# Set working directory (optional, Nginx doesn't use this)
+WORKDIR /usr/share/nginx/html
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
+# Remove default Nginx static assets
+RUN rm -rf ./*
 
-# Use the official ASP.NET runtime image for run
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
+# Copy all your local static files (HTML, CSS, JS, images, etc.)
+COPY . .
 
-# Expose port 80
+# Expose HTTP port
 EXPOSE 80
 
-# Start the application
-ENTRYPOINT ["dotnet", "TechBit.Net.Bd.dll"]
+# Start Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
