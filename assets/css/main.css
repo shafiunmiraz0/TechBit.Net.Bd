@@ -1438,6 +1438,31 @@ input, select, textarea {
 
 		}
 
+	.header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.image-logo {
+    text-align: center;
+}
+
+.image-logo img {
+    transition: transform 0.3s ease;
+}
+
+.image-logo img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 736px) {
+    .image-logo img {
+        height: 80px;
+    }
+}
+
 /* Form */
 
 	form label {
@@ -2906,27 +2931,3 @@ input, select, textarea {
 			}
 
 	}
-
-.header-container {
-    position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.image-logo {
-    position: relative;
-    z-index: 1;
-}
-
-@media screen and (max-width: 736px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .image-logo img {
-        max-height: 40px;
-        margin: 10px 0;
-    }
-}
