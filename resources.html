@@ -5,139 +5,119 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>
-    <body class="homepage is-preload">
+    <body class="right-sidebar is-preload">
         <div id="page-wrapper">
             <!-- Header -->
             <section id="header">
-                <!-- Top Header Bar -->
-                <div class="top-header" style="background-color: #252525; padding: 10px 0;">
-                    <div class="container" style="max-width: 1400px; margin: 0 auto;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <!-- Logo -->
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="images/logo.jpg" alt="TechBit Logo" style="height: 120px; width: auto;"/>
-                                </a>
-                            </div>
-                            
-                            <!-- Top Navigation -->
-                            <div class="top-menu">
-                                <nav class="nav-links">
-                                    <a href="index.html" class="nav-button">Home</a>
-                                    <a href="blog.html" class="nav-button">Blog</a>
-                                    <a href="service.html" class="nav-button">Our Services</a>
-                                    <a href="resources.html" class="nav-button">Resources</a>
-                                    <a href="contact.html" class="nav-button">Contact</a>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Logo -->
+                <h1><a href="index.html">TechBit</a></h1>
 
-                <!-- Banner -->
-                <section id="banner">
-                    <header>
-                        <h2>Learning Resources</h2>
-                        <p>Free Educational Materials & Tools</p>
-                    </header>
-                </section>
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#">Courses</a>
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Mobile Development</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li>
+                                    <a href="#">Programming Languages</a>
+                                    <ul>
+                                        <li><a href="#">Python</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">C#/.NET</a></li>
+                                        <li><a href="#">PHP</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Cloud Computing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li class="current"><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </section>
 
             <!-- Main -->
             <section id="main">
                 <div class="container">
                     <div class="row">
-                        <!-- Sidebar -->
-                        <div class="col-4 col-12-medium">
-                            <section class="box">
+                        <div class="col-8 col-12-medium">
+                            <!-- Content -->
+                            <article class="box post">
+                                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
                                 <header>
-                                    <h3>Resource Categories</h3>
+                                    <h2>Learning Resources</h2>
+                                    <p>Free Educational Materials and Tools</p>
                                 </header>
-                                <ul class="divided">
-                                    <li><a href="#tutorials">Video Tutorials</a></li>
-                                    <li><a href="#ebooks">E-Books</a></li>
-                                    <li><a href="#projects">Practice Projects</a></li>
-                                    <li><a href="#tools">Development Tools</a></li>
-                                    <li><a href="#templates">Code Templates</a></li>
-                                </ul>
-                            </section>
+                                <p>
+                                    Access our comprehensive collection of learning resources designed to support your 
+                                    technology education journey. From tutorial videos to coding exercises, we provide 
+                                    everything you need to enhance your skills.
+                                </p>
+                                
+                                <section>
+                                    <header>
+                                        <h3>Free Tutorials</h3>
+                                    </header>
+                                    <ul class="divided">
+                                        <li><a href="#">Getting Started with HTML & CSS</a></li>
+                                        <li><a href="#">JavaScript Fundamentals</a></li>
+                                        <li><a href="#">Python Programming Basics</a></li>
+                                        <li><a href="#">Introduction to Data Science</a></li>
+                                    </ul>
+                                </section>
 
-                            <section class="box">
-                                <header>
-                                    <h3>Featured Resources</h3>
-                                </header>
-                                <ul class="divided">
-                                    <li>
-                                        <a href="#">Web Development Guide 2025</a>
-                                        <p>Complete roadmap for modern web development</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mobile App Development Kit</a>
-                                        <p>Essential resources for app developers</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">Data Science Handbook</a>
-                                        <p>Comprehensive guide to data analysis</p>
-                                    </li>
-                                </ul>
-                            </section>
+                                <section>
+                                    <header>
+                                        <h3>Practice Projects</h3>
+                                    </header>
+                                    <p>
+                                        Build real-world projects to practice your skills. Each project includes 
+                                        starter code, documentation, and step-by-step guidance.
+                                    </p>
+                                    <ul class="divided">
+                                        <li><a href="#">Portfolio Website Project</a></li>
+                                        <li><a href="#">Task Management App</a></li>
+                                        <li><a href="#">E-commerce Website</a></li>
+                                        <li><a href="#">Data Analysis Dashboard</a></li>
+                                    </ul>
+                                </section>
+                            </article>
                         </div>
 
-                        <!-- Content -->
-                        <div class="col-8 col-12-medium">
-                            <!-- Resource Sections -->
-                            <section id="tutorials" class="resource-section">
-                                <h3><i class="fas fa-video"></i> Video Tutorials</h3>
-                                <div class="resource-grid">
-                                    <div class="resource-item">
-                                        <img src="images/tutorial1.jpg" alt="Tutorial" />
-                                        <h4>React.js Fundamentals</h4>
-                                        <p>Learn React from scratch with practical examples</p>
-                                        <a href="#" class="button">Watch Now</a>
-                                    </div>
-                                    <div class="resource-item">
-                                        <img src="images/tutorial2.jpg" alt="Tutorial" />
-                                        <h4>Python Programming</h4>
-                                        <p>Master Python programming basics to advanced</p>
-                                        <a href="#" class="button">Watch Now</a>
-                                    </div>
-                                </div>
+                        <div class="col-4 col-12-medium">
+                            <!-- Sidebar -->
+                            <section class="box">
+                                <header>
+                                    <h3>Learning Tools</h3>
+                                </header>
+                                <ul class="divided">
+                                    <li><a href="#">Code Editor Setup Guide</a></li>
+                                    <li><a href="#">Development Environment Guide</a></li>
+                                    <li><a href="#">Git & GitHub Basics</a></li>
+                                    <li><a href="#">Command Line Essentials</a></li>
+                                </ul>
                             </section>
 
-                            <section id="ebooks" class="resource-section">
-                                <h3><i class="fas fa-book"></i> E-Books</h3>
-                                <div class="resource-grid">
-                                    <div class="resource-item">
-                                        <img src="images/ebook1.jpg" alt="E-Book" />
-                                        <h4>Web Development Guide</h4>
-                                        <p>Comprehensive guide to modern web development</p>
-                                        <a href="#" class="button">Download PDF</a>
-                                    </div>
-                                    <div class="resource-item">
-                                        <img src="images/ebook2.jpg" alt="E-Book" />
-                                        <h4>Mobile Development</h4>
-                                        <p>Complete guide to mobile app development</p>
-                                        <a href="#" class="button">Download PDF</a>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <section id="projects" class="resource-section">
-                                <h3><i class="fas fa-project-diagram"></i> Practice Projects</h3>
-                                <div class="resource-grid">
-                                    <div class="resource-item">
-                                        <h4>E-Commerce Website</h4>
-                                        <p>Build a full-featured online store</p>
-                                        <a href="#" class="button">View Project</a>
-                                    </div>
-                                    <div class="resource-item">
-                                        <h4>Social Media App</h4>
-                                        <p>Create a social networking platform</p>
-                                        <a href="#" class="button">View Project</a>
-                                    </div>
-                                </div>
+                            <section class="box">
+                                <header>
+                                    <h3>Resource Library</h3>
+                                </header>
+                                <ul class="divided">
+                                    <li><a href="#">E-Books Collection</a></li>
+                                    <li><a href="#">Video Tutorials</a></li>
+                                    <li><a href="#">Coding Challenges</a></li>
+                                    <li><a href="#">Interview Preparation</a></li>
+                                </ul>
+                                <footer>
+                                    <a href="#" class="button alt">Browse All Resources</a>
+                                </footer>
                             </section>
                         </div>
                     </div>
