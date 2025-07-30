@@ -1,19 +1,23 @@
 # Use the official Nginx base image
 FROM nginx:alpine
 
-# Set working directory (optional)
+# Set working directory
 WORKDIR /usr/share/nginx/html
 
 # Remove default Nginx static assets
 RUN rm -rf ./*
 
-# Copy static site files
-COPY . .
+# Copy all static assets
+COPY assets/ ./assets/
+COPY images/ ./images/
 
-# Copy custom nginx config
+# Copy all HTML files
+COPY *.html ./
+
+# Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose custom port
+# Expose the port defined in nginx.conf
 EXPOSE 8088
 
 # Start nginx
