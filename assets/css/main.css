@@ -2883,10 +2883,7 @@ input, select, textarea {
 					color: #252122;
 					font-weight: 900;
 					font-size: 1.75em;
-								
-								
-								
-									letter-spacing: -0.035em;
+					letter-spacing: -0.035em;
 				}
 
 		/* Intro */
@@ -2940,42 +2937,3 @@ input, select, textarea {
 			}
 
 	}
-
-/* Navigation Buttons */
-
-.nav-button {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.nav-button:hover {
-    background-color: #e89980;
-    color: #fff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-color: #e89980;
-}
-
-.nav-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive styles */
-@media screen and (max-width: 736px) {
-    .top-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .nav-button {
-        padding: 6px 12px;
-        font-size: 0.9em;
-    }
-}
