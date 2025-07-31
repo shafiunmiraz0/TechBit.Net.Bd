@@ -4,44 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TechBit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
     }
 
-    h1 {
-      font-size: 3rem;
-      color: #004080;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      max-width: 600px;
-      font-size: 1.2rem;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: #222;
       line-height: 1.6;
     }
 
-    .container {
+    header {
+      background-color: #004080;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background-color: white;
       padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      text-align: center;
+      margin-top: -2rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #004080;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #003366;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>TechBit</h1>
+
+  <header>TechBit</header>
+
+  <section class="hero">
     <p>
-      It provides IT infrastructure solutions (cloud, networking, microservice, hosting solutions at low cost rate) and small development service.
+      We specialize in IT infrastructure: cloud computing, networking, microservices, and hosting solutions at cost-effective rates. We also offer agile software development for startups and businesses.
     </p>
-  </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cloud Infrastructure</h3>
+        <p>Design and manage scalable cloud environments using Kubernetes, Docker, and popular cloud providers like AWS, GCP, and Azure.</p>
+      </div>
+      <div class="card">
+        <h3>Microservice Architecture</h3>
+        <p>We help break your monolith into microservices using Spring Boot, gRPC, REST, and event-driven architecture.</p>
+      </div>
+      <div class="card">
+        <h3>Network Solutions</h3>
+        <p>Secure and optimize your on-premise and cloud networks with firewalls, VPNs, SDN, and MikroTik/OpnSense routing solutions.</p>
+      </div>
+      <div class="card">
+        <h3>DevOps & Automation</h3>
+        <p>CI/CD, GitOps, monitoring, alerting, and IaC using Jenkins, ArgoCD, Ansible, Terraform, and Prometheus/Grafana stack.</p>
+      </div>
+      <div class="card">
+        <h3>Web & App Development</h3>
+        <p>From MVPs to production-ready applications using Java (Spring), Go, Node.js, React, and Next.js.</p>
+      </div>
+      <div class="card">
+        <h3>Hosting & DNS</h3>
+        <p>Managed hosting, reverse proxies, domain routing via Cloudflare, NGINX, HAProxy, and Let's Encrypt SSL automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">From the Blog</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Deploying Kubernetes on Bare Metal</h3>
+        <p>A detailed guide to installing Kubernetes clusters using kubeadm, containerd, and Cilium networking on your own infrastructure.</p>
+      </div>
+      <div class="card">
+        <h3>CI/CD Pipelines with ArgoCD</h3>
+        <p>Learn how to implement GitOps workflows with ArgoCD to automate deployments across environments with rollback support.</p>
+      </div>
+      <div class="card">
+        <h3>Monitoring with Prometheus & Grafana</h3>
+        <p>Step-by-step guide to monitoring Kubernetes applications using metrics-server, Prometheus Operator, and Grafana dashboards.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 TechBit. All rights reserved.</footer>
+
 </body>
 </html>
