@@ -3,162 +3,219 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechBit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>TechBit - Infrastructure & Development</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f4f8;
-      color: #222;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #1f1f1f;
+      color: #f2f2f2;
     }
 
     header {
-      background-color: #004080;
-      padding: 2rem 1rem;
+      background-color: #121212;
+      padding: 20px 0;
       text-align: center;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 600;
     }
 
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    .logo img {
+      height: 80px;
     }
 
     .hero {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       text-align: center;
-      margin-top: -2rem;
+      padding: 60px 20px;
+      background: #2c2c2c;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0 0 20px;
+      color: #00bcd4;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      color: #555;
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #004080;
-      margin-bottom: 1.5rem;
-      text-align: center;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .grid {
+    h2 {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background-color: #2a2a2a;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 5px solid #00bcd4;
+    }
+
+    .blog {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    .blog-post {
+      background-color: #2a2a2a;
+      padding: 20px;
+      border-radius: 8px;
     }
 
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #003366;
+    .blog-post h3 {
+      margin-top: 0;
+      color: #00e5ff;
     }
 
-    .card p {
-      font-size: 0.95rem;
-      color: #555;
+    .blog-post p {
+      color: #ccc;
+    }
+
+    .number-scroll {
+      font-size: 2.5em;
+      color: #76ff03;
+      text-align: right;
+    }
+
+    .news-feed {
+      background-color: #232323;
+      padding: 20px;
+      border-left: 5px solid #00bcd4;
+    }
+
+    .news-feed li {
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .contact {
+      background-color: #121212;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact h2 {
+      margin-top: 0;
+    }
+
+    .contact-info {
+      font-size: 1.1em;
+      color: #aaa;
     }
 
     footer {
-      background-color: #e9ecef;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 3rem;
+      padding: 20px;
+      background-color: #0f0f0f;
+      font-size: 0.9em;
+      color: #777;
     }
 
-    @media (max-width: 600px) {
-      header {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
+    @media screen and (max-width: 768px) {
+      .blog {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>TechBit</header>
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="TechBit Logo" />
+    </div>
+  </header>
 
   <section class="hero">
+    <h1>TechBit</h1>
     <p>
-      We specialize in IT infrastructure: cloud computing, networking, microservices, and hosting solutions at cost-effective rates. We also offer agile software development for startups and businesses.
+      Providing cloud, networking, containerized microservices, DevOps, hosting, and scalable infrastructure at an affordable rate. Also offering small and medium development solutions tailored for your business.
     </p>
   </section>
 
-  <section>
-    <h2 class="section-title">Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cloud Infrastructure</h3>
-        <p>Design and manage scalable cloud environments using Kubernetes, Docker, and popular cloud providers like AWS, GCP, and Azure.</p>
-      </div>
-      <div class="card">
-        <h3>Microservice Architecture</h3>
-        <p>We help break your monolith into microservices using Spring Boot, gRPC, REST, and event-driven architecture.</p>
-      </div>
-      <div class="card">
-        <h3>Network Solutions</h3>
-        <p>Secure and optimize your on-premise and cloud networks with firewalls, VPNs, SDN, and MikroTik/OpnSense routing solutions.</p>
-      </div>
-      <div class="card">
-        <h3>DevOps & Automation</h3>
-        <p>CI/CD, GitOps, monitoring, alerting, and IaC using Jenkins, ArgoCD, Ansible, Terraform, and Prometheus/Grafana stack.</p>
-      </div>
-      <div class="card">
-        <h3>Web & App Development</h3>
-        <p>From MVPs to production-ready applications using Java (Spring), Go, Node.js, React, and Next.js.</p>
-      </div>
-      <div class="card">
-        <h3>Hosting & DNS</h3>
-        <p>Managed hosting, reverse proxies, domain routing via Cloudflare, NGINX, HAProxy, and Let's Encrypt SSL automation.</p>
-      </div>
+  <section class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Cloud Infrastructure Design & Deployment (AWS, Azure, Private)</li>
+      <li>Containerized Microservices with Kubernetes</li>
+      <li>Managed Hosting Solutions</li>
+      <li>Network Design, VPN, Load Balancers</li>
+      <li>DevOps, CI/CD & Monitoring Solutions</li>
+      <li>Custom Software Development</li>
+    </ul>
+  </section>
+
+  <section class="blog">
+    <div class="blog-post">
+      <h3>Latest Trends in Cloud DevOps</h3>
+      <p>Discover how GitOps, ArgoCD, and observability tools are reshaping cloud delivery pipelines.</p>
+      <div class="number-scroll" id="count1">0</div>
+    </div>
+    <div class="blog-post">
+      <h3>Securing Microservices with Zero Trust</h3>
+      <p>Learn how mTLS, API Gateway, and service mesh can harden your distributed infrastructure.</p>
+      <div class="number-scroll" id="count2">0</div>
     </div>
   </section>
 
-  <section>
-    <h2 class="section-title">From the Blog</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Deploying Kubernetes on Bare Metal</h3>
-        <p>A detailed guide to installing Kubernetes clusters using kubeadm, containerd, and Cilium networking on your own infrastructure.</p>
-      </div>
-      <div class="card">
-        <h3>CI/CD Pipelines with ArgoCD</h3>
-        <p>Learn how to implement GitOps workflows with ArgoCD to automate deployments across environments with rollback support.</p>
-      </div>
-      <div class="card">
-        <h3>Monitoring with Prometheus & Grafana</h3>
-        <p>Step-by-step guide to monitoring Kubernetes applications using metrics-server, Prometheus Operator, and Grafana dashboards.</p>
-      </div>
+  <section class="news-feed">
+    <h2>Tech News Feed</h2>
+    <ul>
+      <li>📰 OpenAI launches GPT-5 with native code refactoring</li>
+      <li>📰 Kubernetes 1.34 introduces lightweight node provisioning</li>
+      <li>📰 Cilium now default CNI in major cloud providers</li>
+      <li>📰 Edge computing reshaping low-latency apps in Asia</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      📞 +880 123 456 7890<br />
+      📧 info@techbit.net.bd<br />
+      📍 Dhaka, Bangladesh
     </div>
   </section>
 
-  <footer>&copy; 2025 TechBit. All rights reserved.</footer>
+  <footer>
+    &copy; 2025 TechBit. All rights reserved.
+  </footer>
+
+  <script>
+    function animateValue(id, start, end, duration) {
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      let timer = setInterval(function () {
+        current += increment;
+        obj.textContent = current;
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+
+    animateValue("count1", 0, 321, 1500);
+    animateValue("count2", 0, 152, 1500);
+  </script>
 
 </body>
 </html>
